@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TextureAtlas>
+	<Texture>Assets/PlayerSpritesheet</Texture>
+	<Regions>
+		<!-- player down walk & idle-->
+		<Region name="idled0" x="16" y="16" width="16" height="16" />
+		<Region name="idled1" x="64" y="16" width="16" height="16" />
+
+		<Region name="walkd0" x="112" y="16" width="16" height="16" />
+		<Region name="walkd1" x="160" y="16" width="16" height="16" />
+
+		<!-- up -->
+		<Region name="idleu0" x="16" y="64" width="16" height="16" />
+		<Region name="idleu1" x="64" y="64" width="16" height="16" />
+
+		<Region name="walku0" x="112" y="64" width="16" height="16" />
+		<Region name="walku1" x="160" y="64" width="16" height="16" />
+
+		<!-- Left -->
+		<Region name="idlel0" x="16" y="112" width="16" height="16" />
+		<Region name="idlel1" x="64" y="112" width="16" height="16" />
+
+		<Region name="walkl0" x="112" y="112" width="16" height="16" />
+		<Region name="walkl1" x="160" y="112" width="16" height="16" />
+
+		<!-- Right -->
+		<Region name="idler0" x="16" y="160" width="16" height="16" />
+		<Region name="idler1" x="64" y="160" width="16" height="16" />
+
+		<Region name="walkr0" x="112" y="160" width="16" height="16" />
+		<Region name="walkr1" x="160" y="160" width="16" height="16" />
+	</Regions>
+</TextureAtlas>

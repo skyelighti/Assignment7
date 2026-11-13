@@ -1,0 +1,91 @@
+[
+  {
+    "name": "Assets/PlayerSpriteSheet.png",
+    "texture": "Assets/PlayerSpritesheet",
+    "frameWidth": 16,
+    "frameHeight": 16,
+    "frameDuration": 0.4,
+    "animations": {
+      "IdleUp": {
+        "framesindx": [
+          49,
+          52
+        ],
+        "isLooping": true,
+        "isReversed": false,
+        "isPingPong": false
+      },
+      "IdleDown": {
+        "framesindx": [
+          13,
+          16
+        ],
+        "isLooping": true,
+        "isReversed": false,
+        "isPingPong": false
+      },
+      "IdleRight": {
+        "framesindx": [
+          121,
+          124
+        ],
+        "isLooping": true,
+        "isReversed": false,
+        "isPingPong": false
+      },
+      "IdleLeft": {
+        "framesindx": [
+          85,
+          88
+        ],
+        "isLooping": true,
+        "isReversed": false,
+        "isPingPong": false
+      },
+      "WalkUp": {
+        "framesindx": [
+          55,
+          58
+        ],
+        "isLooping": true,
+        "isReversed": false,
+        "isPingPong": false
+      },
+      "WalkDown": {
+        "framesindx": [
+          19,
+          22
+        ],
+        "isLooping": true,
+        "isReversed": false,
+        "isPingPong": false
+      },
+      "WalkRight": {
+        "framesindx": [
+          127,
+          130
+        ],
+        "isLooping": true,
+        "isReversed": false,
+        "isPingPong": false
+      },
+      "WalkLeft": {
+        "framesindx": [
+          91,
+          94
+        ],
+        "isLooping": true,
+        "isReversed": false,
+        "isPingPong": false
+      }
+    }
+  },
+  {
+    "name": "Grass",
+    "texture": "Assets/Grass",
+    "frameWidth": 16,
+    "frameHeight": 16,
+    "frameDuration": 0.4,
+    "animations": {}
+  }
+]

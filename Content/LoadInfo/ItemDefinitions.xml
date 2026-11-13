@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ItemInfo>
+	<Item>
+		<Name>Placeholder Document</Name>
+		<ID>itemID</ID>
+		<Type>Document</Type>
+		<Sprite>placeholder</Sprite>
+		<Properties>
+			<Description>
+				<description>A worn document with an unreadable seal.</description>
+				<DialogueIDs>
+					<ID>placeholder_document_inspect</ID>
+					<ID>placeholder_document_read</ID>
+				</DialogueIDs>
+			</Description>
+		</Properties>
+	</Item>
+</ItemInfo>

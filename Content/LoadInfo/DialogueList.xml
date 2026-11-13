@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<DialogueInfoList>
+	<DialogueInfo>
+		<Character>NPC1</Character>
+		<DialogueLines>
+			<Line>
+				<Name>Placeholder NPC</Name>
+				<Dialogue>Welcome, traveler.</Dialogue>
+				<Sprite>placeholder</Sprite>
+			</Line>
+		</DialogueLines>
+		<Advance>true</Advance>
+		<ID>npc_lineID</ID>
+	</DialogueInfo>
+	<DialogueInfo>
+		<Character>NPC1</Character>
+		<DialogueLines>
+			<Line>
+				<Name>Placeholder NPC</Name>
+				<Dialogue>Good to see you again.</Dialogue>
+				<Sprite>placeholder</Sprite>
+			</Line>
+		</DialogueLines>
+		<ID>npc_line2</ID>
+	</DialogueInfo>
+	<DialogueInfo>
+		<Character>NPC2</Character>
+		<ID>npc2_intro</ID>
+		<Advance>true</Advance>
+		<DialogueLines>
+			<Line>
+				<Name>Placeholder NPC 2</Name>
+				<Dialogue>Hello there.</Dialogue>
+			</Line>
+		</DialogueLines>
+	</DialogueInfo>
+	<DialogueInfo>
+		<Character>NPC2</Character>
+		<ID>npc2_greeting</ID>
+		<DialogueLines>
+			<Line>
+				<Name>Placeholder NPC 2</Name>
+				<Dialogue>Good to see you again.</Dialogue>
+			</Line>
+		</DialogueLines>
+	</DialogueInfo>
+	<DialogueInfo>
+		<ID>placeholder_document_inspect</ID>
+		<DialogueLines>
+			<Line>
+				<Dialogue>The paper is worn, but a few words are still legible.</Dialogue>
+			</Line>
+		</DialogueLines>
+	</DialogueInfo>
+	<DialogueInfo>
+		<ID>placeholder_document_read</ID>
+		<DialogueLines>
+			<Line>
+				<Dialogue>You recognize the faded note you read earlier.</Dialogue>
+			</Line>
+		</DialogueLines>
+	</DialogueInfo>
+</DialogueInfoList>

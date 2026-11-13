@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SpriteSheetAnimations>
+    <SpriteSheet>
+        <AtlasFile>AtlasInfo/PlayerAtlas.xml</AtlasFile>
+        <Name>Assets/PlayerSpriteSheet.png</Name>
+        <Animations>
+            <!-- this is highkey evil asf i need to figure out a better way-->
+            <Animation name ="IdleUp" frames="idleu0 idleu1" duration ="0.4" looping ="true" pingpong = "false" reverse ="false"/>
+            <Animation name ="IdleDown" frames="idled0 idled1" duration ="0.4" looping ="true" pingpong = "false" reverse ="false"/>
+            <Animation name ="IdleRight" frames="idler0 idler1" duration ="0.4" looping ="true" pingpong = "false" reverse ="false"/>
+            <Animation name ="IdleLeft" frames="idlel0 idlel1" duration ="0.4" looping ="true" pingpong = "false" reverse ="false"/>
+            <Animation name ="WalkUp" frames="walku0 walku1" duration ="0.4" looping ="true" pingpong = "false" reverse ="false"/>
+            <Animation name ="WalkDown" frames="walkd0 walkd1" duration ="0.4" looping ="true" pingpong = "false" reverse ="false"/>
+            <Animation name ="WalkRight" frames="walkr0 walkr1" duration ="0.4" looping ="true" pingpong = "false" reverse ="false"/>
+            <Animation name ="WalkLeft" frames="walkl0 walkl1" duration ="0.4" looping ="true" pingpong = "false" reverse ="false"/>
+        </Animations>
+    </SpriteSheet>
+    
+
+</SpriteSheetAnimations>
