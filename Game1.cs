@@ -20,6 +20,8 @@ namespace BaseTemplate {
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
+            _graphics.PreferredBackBufferWidth = 960;
+            _graphics.PreferredBackBufferHeight = 480;
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
         }
@@ -55,7 +57,7 @@ namespace BaseTemplate {
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.Black);
+            GraphicsDevice.Clear(new Color(38, 46, 64));
             _spriteBatch.Begin(samplerState: SamplerState.PointClamp, blendState: BlendState.AlphaBlend, transformMatrix: Main.camera.GetViewMatrix());
             // TODO: Add your drawing code here
             main.Draw(_spriteBatch);

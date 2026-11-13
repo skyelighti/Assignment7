@@ -18,5 +18,7 @@ public enum GameAction
     Attack,
     ProgressDialogue,
     Save,
-    Load
+    Load,
+    Jump,
+    Restart
 }

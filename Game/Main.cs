@@ -22,7 +22,7 @@ public class Main
     private bool loadRequested;
 
     InputManager input;
-    DialogueManager dialogue;        // optional — null when dialogue is disabled
+    DialogueManager dialogue;        
     PersistenceManager persistence;
 
     public Main(ContentManager content)
@@ -31,7 +31,7 @@ public class Main
         var sprites = new SpriteLibrary(content);
         var gameD = new GameDefinitions(content);
         //UIManager = new UIManager(content);
-        Services.Initialize(sprites, gameD, true, false);
+        Services.Initialize(sprites, gameD, false, false);
         //simplify sprite loading? 
 
         sceneManager = new SceneManager(content);

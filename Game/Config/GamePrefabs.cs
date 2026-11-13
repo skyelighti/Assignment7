@@ -18,6 +18,27 @@ public static partial class Prefabs
     public static int defaultrotation = 0;
     public static Layer defaultLayer = Layer.Default;
 
+    public static GameObject CreatePlayer(Scene owner, Sprite sprite, Vector2 position)
+    {
+        GameObject p = CreateSolid(owner, sprite, position);
+        p.UpdateSize(28, 32);
+        p.UpdateLayer(Layer.Player);
+        p.AddTag(Tag.Player);
+        p.AddComponent(new PlayerMovementComponent(180f, p));
+        return p;
+    }
+
+    public static GameObject CreateEnemy(Scene owner, Sprite sprite, Vector2 position)
+    {
+        GameObject e = CreateSolid(owner, sprite, position);
+        e.UpdateSize(32, 32);
+        e.UpdateLayer(Layer.Enemy);
+        e.AddTag(Tag.Enemy);
+        e.GetComponent<HitboxComponent>().SetTrigger(true);
+        e.AddComponent(new EnemyComponent(e));
+        return e;
+    }
+
     /// <summary>
     /// create bullet - mainly for use with object pooling as the factory creationn method
     /// attaches the bullet component to a factory solid, changes layer to enemy atk

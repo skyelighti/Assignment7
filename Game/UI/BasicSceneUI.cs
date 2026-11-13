@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Gum.Forms.Controls;
+using Gum.Wireframe;
 
 namespace GameBase;
 
@@ -14,6 +16,6 @@ public class BasicSceneUI : SceneUI
 
     protected override void Init()
     {
-        //all scene ui should be created here
+
     }
 }

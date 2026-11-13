@@ -9,6 +9,7 @@ namespace GameBase;
 
 public class PlayerMovementComponent : MovementComponent
 {
+    public event Action OnDeath;
     InputManager input;
     PlayerLocatorService playerLocator;
 
@@ -19,6 +20,7 @@ public class PlayerMovementComponent : MovementComponent
 
     public void OnKeyDown(GameAction action)
     {
+        if (!activeSelf) { return; }
         //i want this to happen evey update
         switch (action)
         {
@@ -27,12 +29,6 @@ public class PlayerMovementComponent : MovementComponent
                 break;
             case (GameAction.MoveLeft):
                 left = true;
-                break;
-            case (GameAction.MoveUp):
-                up = true;
-                break;
-            case (GameAction.MoveDown):
-                down = true;
                 break;
         }
     }
@@ -47,13 +43,22 @@ public class PlayerMovementComponent : MovementComponent
             case (GameAction.MoveLeft):
                 left = false;
                 break;
-            case (GameAction.MoveUp):
-                up = false;
-                break;
-            case (GameAction.MoveDown):
-                down = false;  
-                break;
         }
+    }
+
+    public void OnActionPressed(GameAction action)
+    {
+        if (activeSelf && action == GameAction.Jump)
+        {
+            Jump();
+        }
+    }
+
+    public void Die()
+    {
+        if (!activeSelf) { return; }
+        owner.SetActive(false);
+        OnDeath?.Invoke();
     }
 
     public override void OnDestroy() {
@@ -61,6 +66,7 @@ public class PlayerMovementComponent : MovementComponent
         {
             input.ActionKeyDown -= OnKeyDown;
             input.ActionReleased -= OnKeyReleased;
+            input.ActionPressed -= OnActionPressed;
         }
 
         if (playerLocator != null)
@@ -72,11 +78,13 @@ public class PlayerMovementComponent : MovementComponent
 
     public override void Connect()
     {
+        base.Connect();
         // wiring belongs here, not in the constructor: Connect runs via GameObject.Init
         // once the object is fully assembled. cache every service lookup.
         input = Services.Get<InputManager>();
         input.ActionKeyDown += OnKeyDown;
         input.ActionReleased += OnKeyReleased;
+        input.ActionPressed += OnActionPressed;
 
         // the locator listens to us; we never hand out a reference to ourselves.
         playerLocator = Services.Get<PlayerLocatorService>();
